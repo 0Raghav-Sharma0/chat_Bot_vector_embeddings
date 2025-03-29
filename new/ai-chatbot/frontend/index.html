@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Chatbot</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex items-center justify-center h-screen p-4" style="background-color: var(--bg-color); transition: background 0.3s ease;">
+    <div class="w-full max-w-md p-6 rounded-2xl border shadow-lg"
+         style="background-color: var(--chat-bg); border-color: var(--border-color); color: var(--text-color); transition: background 0.3s ease;">
+        <div class="flex justify-between items-center">
+            <h2 class="text-3xl font-bold tracking-wide" style="color: var(--text-color);">
+                AI Chatbot
+            </h2>
+            <button id="themeToggle" class="p-2 rounded-full">🌞</button>
+        </div>
+
+        <div id="chat" class="h-72 overflow-y-auto border rounded-md p-3 mt-4 shadow-inner"
+             style="background-color: var(--chat-bg); border-color: var(--border-color); transition: background 0.3s ease;">
+        </div>
+
+        <div class="mt-4 flex">
+            <input type="text" id="userInput" class="border p-3 w-full rounded-l-md focus:outline-none focus:ring-2 transition-all duration-300"
+                   style="background-color: var(--chat-bg); color: var(--text-color); border-color: var(--border-color); transition: background 0.3s ease;"
+                   placeholder="Type a message...">
+            <button onclick="sendMessage()" class="bg-blue-500 text-white px-5 py-3 rounded-r-md hover:bg-blue-600 transition-all duration-300 shadow-md hover:shadow-lg">
+                Send
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
