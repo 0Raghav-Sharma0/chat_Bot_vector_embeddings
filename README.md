@@ -139,6 +139,13 @@ Developed by [Raghav Sharma](https://github.com/0Raghav-Sharma0) – IIIT Sonepa
 
 ---
 
+## Note on Pinecone Vector Embeddings
+
+While Pinecone provides a powerful and scalable vector database for storing embeddings, in this project we found that relying solely on Pinecone vector embeddings for remembering conversational context has limitations. It may not always preserve detailed or long-term context accurately across multiple interactions.
+
+For improved context retention, additional strategies like combining embeddings with session management, memory buffers, or hybrid retrieval methods might be necessary.
+
+
 ## LICENSE
 
 This project is licensed under the [MIT License](./ai-chatbot/LICENSE).
