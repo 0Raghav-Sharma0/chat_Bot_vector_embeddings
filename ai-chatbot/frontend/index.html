@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Chatbot</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #f8fafc;
+            --chat-bg: #ffffff;
+            --text-color: #1e293b;
+            --border-color: #e2e8f0;
+            --primary: #3b82f6;
+        }
+        
+        .dark {
+            --bg-color: #0f172a;
+            --chat-bg: #1e293b;
+            --text-color: #f8fafc;
+            --border-color: #334155;
+            --primary: #818cf8;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            transition: background-color 0.3s ease;
+        }
+        
+        .message-bubble {
+            max-width: 80%;
+            padding: 14px 18px;
+            border-radius: 20px;
+            margin-bottom: 14px;
+            animation: fadeIn 0.3s ease;
+        }
+        
+        .user-message {
+            background: var(--primary);
+            color: white;
+            align-self: flex-end;
+            border-bottom-right-radius: 6px;
+        }
+        
+        .bot-message {
+            background: var(--chat-bg);
+            color: var(--text-color);
+            border: 1px solid var(--border-color);
+            align-self: flex-start;
+            border-bottom-left-radius: 6px;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .typing-indicator span {
+            height: 10px;
+            width: 10px;
+            background: #9ca3af;
+            border-radius: 50%;
+            display: inline-block;
+            margin: 0 3px;
+            animation: bounce 1.5s infinite ease-in-out;
+        }
+        
+        @keyframes bounce {
+            0%, 60%, 100% { transform: translateY(0); }
+            30% { transform: translateY(-5px); }
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen p-4" style="background-color: var(--bg-color)">
+    <div class="w-full max-w-2xl bg-white dark:bg-slate-800 rounded-xl shadow-xl overflow-hidden border border-gray-200 dark:border-slate-700 transition-all duration-300">
+        <!-- Header -->
+        <div class="bg-blue-500 dark:bg-indigo-600 p-5 text-white">
+            <div class="flex justify-between items-center">
+                <h2 class="text-2xl font-semibold">AI Chatbot</h2>
+                <button id="themeToggle" class="p-3 rounded-full hover:bg-white/10 transition">
+                    <span class="dark:hidden text-xl">🌞</span>
+                    <span class="hidden dark:inline text-xl">🌙</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Larger square chat area -->
+        <div id="chat" class="h-[500px] p-5 overflow-y-auto flex flex-col bg-gray-50 dark:bg-slate-700/20">
+            <!-- Messages will appear here -->
+        </div>
+
+        <!-- Input area -->
+        <div class="border-t border-gray-200 dark:border-slate-700 p-5 bg-white dark:bg-slate-800">
+            <div class="flex gap-3">
+                <input 
+                    type="text" 
+                    id="userInput" 
+                    class="flex-1 border border-gray-300 dark:border-slate-600 rounded-lg px-5 py-4 bg-white dark:bg-slate-700 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-indigo-500 transition text-lg"
+                    placeholder="Type your message..."
+                    autocomplete="off"
+                >
+                <button 
+                    onclick="sendMessage()" 
+                    class="bg-blue-500 dark:bg-indigo-600 hover:bg-blue-600 dark:hover:bg-indigo-700 text-white px-6 py-4 rounded-lg transition shadow-md text-lg"
+                >
+                    Send
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -2,7 +2,7 @@
 
 An intelligent chatbot powered by Google Gemini, with semantic memory using Pinecone and persistent chat history in MongoDB. Built with Node.js and styled with Tailwind CSS.
 
-![Chatbot Screenshot](https://via.placeholder.com/800x500?text=AI+Chatbot+Screenshot) <!-- Replace with actual screenshot -->
+![Chatbot Screenshot](./public/images/Screenshot%202025-05-20%20033836.png)
 
 ---
 
@@ -102,6 +102,10 @@ ai-chatbot/
 ├── frontend/
 │   ├── index.html         # Chat UI
 │   └── script.js          # Client-side logic
+│
+├── public/
+│   └── images/
+│       └── Screenshot 2025-05-20 033836.png
 │
 └── README.md
 ```
