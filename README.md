@@ -2,7 +2,7 @@
 
 An intelligent chatbot powered by Google Gemini, with semantic memory using Pinecone and persistent chat history in MongoDB. Built with Node.js and styled with Tailwind CSS.
 
-![Chatbot Screenshot](./public/images/yoyo.png)
+![Chatbot Screenshot](ai-chatbot/public/images/yoyo.png)
 
 ---
 
