@@ -2,14 +2,10 @@
 
 An intelligent chatbot powered by Google Gemini, with semantic memory using Pinecone and persistent chat history in MongoDB. Built with Node.js and styled with Tailwind CSS.
 
-<<<<<<< HEAD
-![Chatbot Screenshot](ai-chatbot/public/images/yoyo.png)
-=======
+---
 <p align="center">
   <img src="ai-chatbot/public/images/yoyo.png" alt="Chatbot Screenshot" width="600"/>
 </p>
-
->>>>>>> 1d20001a7293216eb17c520469e6f244d5973447
 
 ---
 
@@ -143,6 +139,6 @@ Developed by [Raghav Sharma](https://github.com/0Raghav-Sharma0) – IIIT Sonepa
 
 ---
 
-## 📄 License
+## LICENSE
 
-MIT License. Use freely with attribution.
+This project is licensed under the [MIT License](./ai-chatbot/LICENSE).
