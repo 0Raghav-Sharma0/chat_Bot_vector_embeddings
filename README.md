@@ -145,6 +145,7 @@ While Pinecone provides a powerful and scalable vector database for storing embe
 
 For improved context retention, additional strategies like combining embeddings with session management, memory buffers, or hybrid retrieval methods might be necessary.
 
+---
 
 ## LICENSE
 
